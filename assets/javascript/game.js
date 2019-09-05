@@ -63,12 +63,14 @@ $(document).ready(function () {
         if (user === computerGuess) {
             wins++;
             reset();
-            alert("Congratulations you won!:");
+            // alert("Congratulations you won!:");
         }
         if (user > computerGuess) {
             losses++;
+            console.log(user);
+            $("#userscore-text").text(user);
             reset();
-            alert("Tough luck, try again:")
+            // alert("Tough luck, try again:")
         }
     }
     //random numbers for each color(crystal)
@@ -79,6 +81,7 @@ $(document).ready(function () {
         brown = Math.floor(Math.random() * 13) + 1;
 
         user = 0;
+        displayStats();
     }
 })
 
