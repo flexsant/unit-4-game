@@ -1,34 +1,56 @@
-// Variable for random computer number choice between 19 - 120
-var computerRandom = [""];
+$(document).ready(function() {
 
-// Variables to hold user total scores, wins, and losses.
-var wins = 0;
-var losses = 0;
-var score = 0;
-var scoreBank = [""];
+    // Variable for random computer number choice between 19 - 120
+    var computerRandom = [""];
 
-// Variables to be displayed via browser using getElementById link.
-var computerNumber = document.getElementById("computernumber-text");
-var userScore = document.getElementById("userscore-text");
-var userWins = document.getElementById("userwins-text");
-var userLoses = document.getElementById("userloses-text");
+    // Variables to hold user total scores, wins, and losses.
+    var wins = 0;
+    var losses = 0;
+    var score = 0;
+    var scoreBank = [""];
 
-// Random computer choice, between 19-120
-var computerGuess = Math.floor(Math.random() * 120) + 19;
+    var green = Math.floor(Math.random() * 13) + 1;
+    var tan = Math.floor(Math.random() * 13) + 1;
+    var white = Math.floor(Math.random() * 13) + 1;
+    var brown = Math.floor(Math.random() * 13) + 1;
 
-console.log("computer pick;", computerGuess)
+    // Random computer choice, between 19-120
+    var computerGuess = Math.floor(Math.random() * 120) + 19;
 
-// Program runs whenevr user enters data 
-document.onkeyup = function (event) {
+    console.log("computer pick;", computerGuess)
 
-    var user = event.key;
+    // Program runs whenevr user enters data 
 
-     // Diplays the use and computer guesses, along with wins, losses, toal and remaining guesses
-     userWins.textContent = "You have : " + wins;
-     userLoses.textContent = "You have : " + losses;
+    // Diplays the use and computer guesses, along with wins, losses, toal and remaining guesses
+    $("#computer-text").text(computerGuess);
+    $("#userscore-text").text(score);
+    $("#userwins-text").text(wins);
+    $("#userlosses-text").text(losses);
 
+    // On click displaying values of each user click to allow Math.floor to select random numbers for each.
+    $("#green").on("click", function () {
+        score += green;
+        console.log("score:",score);
+    });
 
-}
+    $("#tan").on("click", function () {
+        score += tan;
+        console.log("score:",score);
+    });
 
+    $("#white").on("click", function () {
+        score += white;
+        console.log("score:",score);
+    });
+
+    $("#brown").on("click", function () {
+        score += brown;
+        console.log("score:",score);
+    });
+})
+
+// If user id's total to get equal to computerRandom tallied for a win then reset game
+
+// If user id's total > computerRandom tallied for a loss then reset game
 
 
