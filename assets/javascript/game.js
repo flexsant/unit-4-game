@@ -59,14 +59,16 @@ $(document).ready(function () {
     });
     //If user total equals computer guess tally win and rest game. If user total is > computer Guess tally loss and reset game.
     function winCheck() {
-        console.log("score:", + user);
+        // console.log("score:", + user);
         if (user === computerGuess) {
             wins++;
             reset();
+            alert("Congratulations you won!:");
         }
         if (user > computerGuess) {
             losses++;
             reset();
+            alert("Tough luck, try again:")
         }
     }
     //random numbers for each color(crystal)

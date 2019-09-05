@@ -2,20 +2,76 @@
 
 
 ## Screen Shot
-<img src="assets/images/Screen.png" alt="screenshot">
+<img src="assets/images/.png" alt="screenshot">
 
 ## Technologies Used
 - HTML - used to create elements on the DOM
 - CSS - styles html elements on page
 - Javascript - allows dynamic interaction between user and computer data entry
+- JQuery - a javascript library that allows for simple yet more diverse and less verbos.
 - Git - version control system to track changes to source code
 - GitHub - hosts repository that can be deployed to GitHub Pages
 
 ## Summary
-This application practices wireframing a bunch of boxes
+This application 
 
 ## Code Snippet
-'''html
+'''JQuery
+
+  // Variables to hold user total scores, wins, and losses.
+    var wins = 0;
+    var losses = 0;
+    var user = 0;
+    // Random number for each object between 1-12.
+    var green = Math.floor(Math.random() * 13) + 1;
+    var tan = Math.floor(Math.random() * 13) + 1;
+    var white = Math.floor(Math.random() * 13) + 1;
+    var brown = Math.floor(Math.random() * 13) + 1;
+
+    // Random computer choice, between 19-120
+    var computerGuess = Math.floor(Math.random() * 120) + 19;
+
+    console.log("computer pick;", computerGuess);
+
+    // Diplays the use and computer guesses, along with wins, losses, toal and remaining guesses
+    function displayStats() {
+        $("#computer-text").text(computerGuess);
+        $("#userscore-text").text(user);
+        $("#userwins-text").text(wins);
+        $("#userlosses-text").text(losses);
+    }
+    // On click displaying values of each user click to allow Math.floor to select random numbers for each.
+    $("#green").on("click", function () {
+        user += green;
+        displayStats();
+        winCheck();
+        console.log("score:", user);
+        // displayStats();
+    });
+
+    $("#tan").on("click", function () {
+        user += tan;
+        displayStats();
+        winCheck();
+        console.log("score:", user);
+        // displayStats();
+    });
+
+    $("#white").on("click", function () {
+        user += white;
+        displayStats();
+        winCheck();
+        console.log("score:", user);
+        // displayStats();
+    });
+
+    $("#brown").on("click", function () {
+        user += brown;
+        displayStats();
+        winCheck();
+        console.log("score:", user);
+        // displayStats();
+    });
 
 <html lang="en">
 
@@ -39,31 +95,6 @@ This application practices wireframing a bunch of boxes
         <p id="computerchoice-text"></p>
 
         <p id="wins-text"></p>
-##Code Snippet
 
-'''javascript
-// Random computer choice, comp must keep same letter
-var computerRandom = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-console.log("letter picked;", computerRandom)
-// Program runs whenever user enters data currently registers as 0
-document.onkeyup = function (event) {
-
-    // User data entry , create a filter to validation
-    var user = event.key;
-    // User data stored in an empty array and displayed in browser with 
-    if (letterBank.includes(user)) {
-        alert("You've already tried this letter, Try a new guess!");
-    }
-    else {letterBank.push(user)
-
-    console.log("letter picked;", user)
-
-    // User data wins or losses gets recorded 
-    if (user === computerRandom) {
-        wins++;
-        computerRandom = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        left = 10;
-    }
 ## Author Links
 [GitHub](https://github.com/flexsant)
