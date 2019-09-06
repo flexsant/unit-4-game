@@ -31,7 +31,7 @@ $(document).ready(function () {
         displayStats();
         winCheck();
         console.log("score:", user);
-        // displayStats();
+u
     });
 
     $("#tan").on("click", function () {
@@ -39,7 +39,6 @@ $(document).ready(function () {
         displayStats();
         winCheck();
         console.log("score:", user);
-        // displayStats();
     });
 
     $("#white").on("click", function () {
@@ -47,7 +46,6 @@ $(document).ready(function () {
         displayStats();
         winCheck();
         console.log("score:", user);
-        // displayStats();
     });
 
     $("#brown").on("click", function () {
@@ -55,7 +53,6 @@ $(document).ready(function () {
         displayStats();
         winCheck();
         console.log("score:", user);
-        // displayStats();
     });
     //If user total equals computer guess tally win and rest game. If user total is > computer Guess tally loss and reset game.
     function winCheck() {
