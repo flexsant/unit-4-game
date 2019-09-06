@@ -13,7 +13,7 @@
 - GitHub - hosts repository that can be deployed to GitHub Pages
 
 ## Summary
-This application 
+This application allows the user to play a matching number game with a computer generated random number. The user chooses from four poisons with different values only seen once it is clicked and the corresponding number is displayed. If the user matches the computer's chosen random number then their win will be tallied. Just as if the user doesn't match the computer generated number then a loss will be tallied. Each new game win or loss with regenarate a computer generated random number and a new random value for each poison. 
 
 ## Code Snippet
 '''JQuery
@@ -73,28 +73,6 @@ This application
         // displayStats();
     });
 
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Psychic-Game</title>
-
-</head>
-
-<body>
-
-    <div>
-        <h1>The Psychic Game</h1>
-
-        <p>Guess what letter I am thinking of?</p>
-
-        <p id="userchoice-text"></p>
-
-        <p id="computerchoice-text"></p>
-
-        <p id="wins-text"></p>
 
 ## Author Links
 [GitHub](https://github.com/flexsant)
