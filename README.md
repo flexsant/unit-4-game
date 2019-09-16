@@ -2,7 +2,7 @@
 
 
 ## Screen Shot
-<img src="assets/images/.png" alt="screenshot">
+<img src="unit4gamescreenshot.png" alt="screenshot">
 
 ## Technologies Used
 - HTML - used to create elements on the DOM
