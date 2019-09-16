@@ -60,14 +60,14 @@ u
         if (user === computerGuess) {
             wins++;
             reset();
-            // alert("Congratulations you won!:");
+            alert("Congratulations you won!:");
         }
         if (user > computerGuess) {
             losses++;
             console.log(user);
             $("#userscore-text").text(user);
             reset();
-            // alert("Tough luck, try again:")
+            alert("Tough luck, try again:")
         }
     }
     //random numbers for each color(crystal)
@@ -76,6 +76,7 @@ u
         tan = Math.floor(Math.random() * 13) + 1;
         white = Math.floor(Math.random() * 13) + 1;
         brown = Math.floor(Math.random() * 13) + 1;
+        computerGuess = Math.floor(Math.random() * 120) + 19;
 
         user = 0;
         displayStats();
